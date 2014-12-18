@@ -1,0 +1,8 @@
+<div>
+  <ul>
+    <% @videos.each do |v| %>
+    <li><%= v.title %></li>
+    <% end %>
+  </ul>
+  <%= link_to 'New Video', videos_new_path %>
+</div>
