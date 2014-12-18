@@ -1,17 +1,17 @@
 Rails.application.routes.draw do
-  root 'posts#index'
+  root 'videos#index'
 
-  get '/posts' => 'posts#index'
+  get '/videos' => 'videos#index'
 
-  get '/posts/new' => 'posts#new'
+  get '/videos/new' => 'videos#new'
 
-  post '/posts' => 'posts#create'
+  post '/videos' => 'videos#create'
 
-  get '/posts/:id' => 'posts#show'
+  get '/videos/:id' => 'videos#show'
 
-  get '/posts/:id/edit' => 'posts#edit'
+  get '/videos/:id/edit' => 'videos#edit'
 
-  put '/posts/:id' => 'posts#update'
+  put '/videos/:id' => 'videos#update'
 
-  delete '/posts/:id' => 'posts#destroy'
+  delete '/videos/:id' => 'videos#destroy'
 end
