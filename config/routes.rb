@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   put '/videos/:id' => 'videos#update'
 
   delete '/videos/:id' => 'videos#destroy'
+
+  resources :playlists
 end

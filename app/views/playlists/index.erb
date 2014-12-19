@@ -1,0 +1,8 @@
+<div>
+  <ul>
+    <% @playlists.each do |p| %>
+    <li><%= link_to p.name || 'nil', "/playlists/#{p.id}" %></li>
+    <% end %>
+  </ul>
+  <%= link_to 'Add New Playlists', new_playlist_path %>
+</div>
