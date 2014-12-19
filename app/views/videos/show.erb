@@ -1,4 +1,11 @@
 <div>
   <h1><%= @video.title %><br></h1>
-  <iframe width="560" height="315" src="//www.youtube.com/embed/<%= @video.youtube_id %>" frameborder="0" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="//www.youtube.com/embed/<%= @video.youtube_id %>" frameborder="0" allowfullscreen></iframe><br>
+  <br>
+  <ol>
+    <% @video.comments.each do |x| %>
+    <li><%= x.body %></li>
+    <% end %>
+  </ol>
+
 </div>
