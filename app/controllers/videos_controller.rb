@@ -12,7 +12,7 @@ class VideosController < ApplicationController
   end
 
   def create
-    test_logic = /([A-Z]\w+)/
+    test_logic = /(\_?[A-Z]\w+)/
     params[:video][:youtube_id] = test_logic.match(params[:video][:youtube_id])[1]
     @video = Video.create(video_params)
     redirect_to action: 'index'
