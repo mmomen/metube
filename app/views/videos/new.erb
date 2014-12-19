@@ -1,13 +1,13 @@
 <div>
   <%= form_tag("/videos", method: "post") do %>
     <%= label_tag('video[title]', "Title:") %>
-    <%= text_field_tag('video[title]') %><br>
+    <%= text_field_tag('video[title]', nil, required: true) %><br>
 
     <%= label_tag('video[summary]', "Summary:") %>
     <%= text_field_tag('video[summary]') %><br>
 
     <%= label_tag('video[youtube_id]', "YouTube Link:") %>
-    <%= text_field_tag('video[youtube_id]') %><br>
+    <%= text_field_tag('video[youtube_id]', nil, required: true) %><br>
 
     <%= submit_tag("submit") %>
   <% end %>
